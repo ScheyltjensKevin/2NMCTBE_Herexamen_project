@@ -1,0 +1,53 @@
+﻿@model IEnumerable<EasyFlights.Models.BonusPoints>
+
+@{
+    Layout = "~/Views/Shared/_layout.cshtml";
+    int total = 0;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Points)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DateAquired)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model != null)
+            {
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Points)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.DateAquired)
+                        </td>
+                    </tr>
+                    total += 5;
+                }
+            }
+            <tr>
+                <th>Total points</th>
+                <td>
+                    @total.ToString()
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

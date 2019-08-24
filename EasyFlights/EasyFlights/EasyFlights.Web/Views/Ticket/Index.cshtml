@@ -1,0 +1,70 @@
+﻿@model IEnumerable<EasyFlights.Models.TicketAdmin>
+@{
+    ViewData["Title"] = "Index";
+
+    if (Model.First().Administrator == 0)
+    {
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+    else
+    {
+        Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+    }
+}
+
+<environment include="Development">
+    <link rel="stylesheet" href="~/css/style.css">
+
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/searchbar.css" />
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css">
+
+</environment>
+@if (Model != null)
+{
+    foreach (var item in Model)
+    {
+        if (item.ID != Guid.Empty)
+        {
+            <div class="demo-box">
+                <div class="flight-info">
+                    <div class="segments">
+                        <div class="segment departure">
+                            <time>@Html.DisplayFor(modelItem => item.Departure)</time>
+                            <span class="airport">@Html.DisplayFor(modelItem => item.Country)</span>
+                        </div>
+                        <div class="divider"><span class="plane"></span></div>
+                        <div class="segment adaptive">
+                            <span class="airport">TO</span>
+                        </div>
+                        <div class="divider adaptive">
+                            <span class="plane"></span>
+                        </div>
+                        <div class="segment destination">
+                            <time>@Html.DisplayFor(modelItem => item.Departure)</time>
+                            <span class="airport"> @Html.DisplayFor(modelItem => item.Destination)</span>
+                        </div>
+                        <div class="segment price">
+                            <span class="price">@Html.DisplayFor(modelItem => item.Price)</span>
+                        </div>
+                        <div class="segment orders">
+                            <form asp-controller="Ticket" asp-action="Cancel">
+                                <input value="@item.ID" name="ticketID" hidden />
+                                <input value="@item.Destination" name="destination" hidden />
+                                <input value="@item.Departure" name="departure" hidden />
+                                <button type="submit" class="order">Cancel</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+
+    }
+}
+else
+{
+    <h3 style="color:white"> Please Buy some tickets first!</h3>
+}

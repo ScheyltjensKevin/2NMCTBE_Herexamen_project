@@ -1,0 +1,27 @@
+﻿using System;
+using EasyFlights.Web.Models;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.UI;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+
+[assembly: HostingStartup(typeof(EasyFlights.Web.Areas.Identity.IdentityHostingStartup))]
+namespace EasyFlights.Web.Areas.Identity
+{
+    public class IdentityHostingStartup : IHostingStartup
+    {
+        public void Configure(IWebHostBuilder builder)
+        {
+            builder.ConfigureServices((context, services) => {
+                services.AddDbContext<EasyFlightsWebContext>(options =>
+                    options.UseSqlServer(
+                        context.Configuration.GetConnectionString("EasyFlightsWebContextConnection")));
+
+                //services.AddDefaultIdentity<IdentityUser>()
+                //    .AddEntityFrameworkStores<EasyFlightsWebContext>();
+            });
+        }
+    }
+}

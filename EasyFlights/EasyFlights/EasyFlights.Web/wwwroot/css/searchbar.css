@@ -1,0 +1,195 @@
+
+
+
+
+
+
+
+
+/****************************/
+/*-------Layout---------*/
+/****************************/
+
+body {
+    background-image: url("https://images.pexels.com/photos/1421903/pexels-photo-1421903.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+    /* Full height */
+    height: 100%;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-sizing: border-box;
+    width: 100%;
+    background-color: #f5f5f5;
+}
+
+
+h3 {
+    color: white;
+}
+
+.multiline {
+    white-space: pre-wrap;
+}
+
+.flight {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 350px;
+    position: relative;
+    top: -9.5em;
+    z-index: 1;
+    font-size: 10px;
+}
+
+
+button {
+    background-color: dimgray;
+    opacity: 0.6;
+    display: block;
+    padding: .5em .5em;
+    margin: 0 auto;
+    line-height: 2em;
+    border: none;
+    border-radius: 1.4em;
+    box-shadow: 0 .3em .6em rgba(0,0,0,.4);
+    position: relative;
+    bottom: -1em;
+}
+
+    button div {
+        display: inline;
+        padding-right: 1em;
+    }
+
+    button:hover {
+        box-shadow: 0 .45em .8em rgba(0,0,0,.4);
+    }
+
+    button i {
+        padding-right: .1em;
+        vertical-align: middle;
+    }
+
+
+.flight_parameters, .flight_search {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flight_parameters {
+    padding: 2em 0 0 3em;
+}
+
+.flight select {
+    padding: .5em .5em;
+    margin: 0 .5em;
+}
+
+.flight_parameters div:hover {
+    background-color: rgba(255,255,255,.15);
+    border-radius: .2em;
+}
+
+.flight_parameters select {
+    border: none;
+}
+
+.flight_search {
+    padding: 1.5em 0 0 3em;
+}
+
+    .flight_search div {
+        flex: 1 1 auto;
+    }
+
+input[type="text"], input[type="date"] {
+    background-color: rgba(255, 255, 255, 0.15);
+    border: none;
+    border-radius: .2em;
+    padding: 1em;
+}
+
+select [type="text"], input[type="date"] {
+    background-color: rgba(255, 255, 255, 0.15);
+    border: none;
+    border-radius: .2em;
+    padding: 1em;
+}
+
+
+select {
+    background-color: transparent;
+    border: none;
+}
+
+#origin {
+    background-color: rgba(255, 255, 255, 0.15);
+    font-size: 2em;
+}
+
+#destination {
+    background-color: rgba(255,255,255,0.15);
+    font-size: 2em;
+}
+
+
+/****************************/
+/*-------Typography---------*/
+/****************************/
+
+
+
+
+
+
+button {
+    color: white;
+    font-size: 1.6em;
+    text-transform: uppercase;
+    font-family: Roboto, Helvetica, sans-serif;
+}
+
+    button i {
+        font-size: 1.6em !important;
+    }
+
+.flight select {
+    font-size: 1.4em;
+}
+
+    .flight select option {
+        color: black;
+    }
+
+.flight input {
+    font-size: 1.6em;
+}
+
+.flight input, .flight select {
+    color: white;
+    font-family: Roboto, Helvetica, sans-serif;
+}
+
+input[id="destination"] {
+    color: rgba(255,255,255, .6);
+}
+
+
+
+
+.dates {
+    color: white;
+}
+
+
+.bounce {
+    animation-iteration-count: infinite;
+    animation-duration: 4s;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.whitePlane {
+    transform: rotate(75deg);
+}

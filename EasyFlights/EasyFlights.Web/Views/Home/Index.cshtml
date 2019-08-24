@@ -1,0 +1,28 @@
+﻿@model EasyFlights.Models.User
+
+@{
+    ViewData["Title"] = "Home Page";
+
+    if (Model.Email != null)
+    {
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+    else
+    {
+        Layout = "~/Views/Shared/_LayoutHome.cshtml";
+    }
+}
+
+
+<div class="text-center">
+    <h1 class="display-4">Welcome to Easy Flights!</h1>
+    <p>Once you have logged in you can start searching for a suitable ticket to your location of choice.</p>
+</div>
+
+
+
+
+
+
+
+

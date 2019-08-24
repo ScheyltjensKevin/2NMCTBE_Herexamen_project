@@ -1,0 +1,28 @@
+body {
+    background-image: url("https://images.pexels.com/photos/1421903/pexels-photo-1421903.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+}
+
+h5 {
+    font-weight: 400;
+}
+
+.container {
+    margin-top: 80px;
+    width: 400px;
+    height: 700px;
+}
+
+.tabs .indicator {
+    background-color: #e0f2f1;
+    height: 60px;
+    opacity: 0.3;
+}
+
+.form-container {
+    padding: 40px;
+    padding-top: 10px;
+}
+
+.confirmation-tabs-btn {
+    position: absolute;
+}

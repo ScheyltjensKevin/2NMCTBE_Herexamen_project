@@ -1,0 +1,176 @@
+﻿@model IEnumerable<EasyFlights.Web.Models.TicketModel>
+
+@{
+    ViewData["Title"] = "Index";
+  
+        Layout = "~/Views/Shared/_layoutBG.cshtml";
+    
+   
+
+}
+<environment include="Development">
+    <link rel="stylesheet" href=@Url.Content("~/css/site.css") />
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css">
+</environment>
+
+<section class="flight">
+    <form class="flight_parameters" asp-action="search" asp-controller="Search">
+        <div>
+
+            <label for="retour"></label>
+            <select id="retour" name="retour">
+                <option value="one way">One Way</option>
+                <option value="two way">Two Way</option>
+
+            </select>
+        </div>
+        <div>
+            <label for="passengers"></label>
+            <select id="passengers" name="passengers">
+                <option value="1">1 passenger</option>
+                <option value="2">2 passengers</option>
+                <option value="3">3 passengers</option>
+                <option value="4">4 passengers</option>
+            </select>
+        </div>
+        <div>
+            <label for="origin"></label>
+            <select id="origin" name="origin">
+                <option value="Japan">Japan</option>
+                <option value="Greece">Greece</option>
+                <option value="United States">United States</option>
+                <option value="Sri Lanka">Sri Lanka</option>
+                <option value="France">France</option>
+                <option value="China">China</option>
+                <option value="Italy">Italy</option>
+                <option value="Finland">Finland</option>
+                <option value="Czech Republic">Czech Republic</option>
+                <option value="New Zealand">New Zealand</option>
+                <option value="Poland">Poland</option>
+            </select>
+        </div>
+        <div>
+            <h3> to </h3>
+        </div>
+        <div>
+            <label for="destination"></label>
+            <select id="destination" name="destination">
+                <option value="Japan">Japan</option>
+                <option value="Greece">Greece</option>
+                <option value="United States">United States</option>
+                <option value="Sri Lanka">Sri Lanka</option>
+                <option value="France">France</option>
+                <option value="China">China</option>
+                <option value="Italy">Italy</option>
+                <option value="Finland">Finland</option>
+                <option value="Czech Republic">Czech Republic</option>
+                <option value="New Zealand">New Zealand</option>
+                <option value="Poland">Poland</option>
+            </select>
+        </div>
+        <div>
+            <label for="start_date"></label>
+            <input type="date"
+                   id="start"
+                   name="start"
+                   value="2019-07-01"
+                   min="2019-07-01"
+                   max="2019-07-30">
+        </div>
+        <div>
+            <label for="end_date"></label>
+            <input type="date"
+                   id="end"
+                   name="end"
+                   value="2019-07-30"
+                   min="2019-07-01"
+                   max="2019-07-30">
+        </div>
+        <button type="submit">
+            <i class="material-icons">search</i>
+            @*<div>Search</div>*@
+        </button>
+    </form>
+</section>
+
+<div class="bounce">
+    <img src="http://static.indigoimages.ca/2016/shop/114450_img12_whiteAirplane_v3.png" alt="white plane" class="whitePlane" />
+</div>
+
+@if(Model.First().Bought == 1)
+{
+    <div class="demo-box"><p >You have succesfully bought a ticket. Check <a style="border-bottom:1px solid" class="text-dark" asp-area="" asp-controller="Ticket" asp-action="Index">My Tickets</a> to see your bought tickets.</p></div>
+}
+
+@foreach (var item in Model)
+{
+    if (item.Available != 0)
+    {
+        if (Model.Count() > 10)
+        {
+            if (item == Model.ElementAt(10))
+            {
+                <div><p style="color:white">Return Flight</p></div>
+
+            }
+            else if (item == Model.ElementAt(0))
+            {
+                <div><p style="color:white">Leave Flight</p></div>
+
+            }
+        }
+        else
+        {
+            if (item == Model.ElementAt(0))
+            {
+                <div><p style="color:white">Leave Flight</p></div>
+
+            }
+        }
+
+        <input hidden name="ticketID" value="@item.ID">
+        <div class="demo-box">
+            <div class="flight-info">
+                <div class="segments">
+                    <div class="segment departure">
+                        <time name="time">@Html.DisplayFor(modelItem => item.Departure)</time>
+                        <span class="airport">@Html.DisplayFor(modelItem => item.Country)</span>
+                    </div>
+                    <div class="divider"><span class="plane"></span></div>
+                    <div class="segment adaptive">
+                        <span class="airport">TO</span>
+                    </div>
+                    <div class="divider adaptive">
+                        <span class="plane"></span>
+                    </div>
+                    <div class="segment destination">
+                        <time>@Html.DisplayFor(modelItem => item.Departure)</time>
+                        <span class="airport" name="destinationCountry"> @Html.DisplayFor(modelItem => item.Destination)</span>
+                    </div>
+                    <div class="segment price">
+                        <span class="price">@Html.DisplayFor(modelItem => item.Price)</span>
+                    </div>
+                    <div class="segment orders">
+                        <form asp-controller="Search" asp-action="Buy">
+                            <input value="@item.ID" name="ticketID" hidden />
+                            <input value="@item.Destination" name="destination" hidden />
+                            <input value="@item.Departure" name="departure" hidden />
+                            <input value="@Model.ElementAt(0).Country" name="origin" hidden />
+                            <input value="@item.returnDate" name="returnDate" hidden />
+                            <input value="@Model.ElementAt(0).wayString" name="wayString" hidden />
+                            <input value="@Model.ElementAt(0).Departure" name="oDeparture" hidden />
+                            <input value="@Model.ElementAt(0).returnDate" name="oReturnDate" hidden />
+                            <input value="@Model.ElementAt(0).Destination" name="oDestination" hidden />
+                            <input value="@Model.ElementAt(0).Country" name="oOrigin" hidden />
+                            <button type="submit" class="order">buy</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+}
+
+

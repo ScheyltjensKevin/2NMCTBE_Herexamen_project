@@ -1,0 +1,41 @@
+﻿@model IEnumerable<EasyFlights.Models.User>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Administrator)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                <td>
+                    @if (item.Administrator == 1)
+                    {
+                        <p>true</p>
+                    }
+                    else
+                    {
+                        <p>false</p>
+                    }
+                    @*@Html.DisplayFor(modelItem => item.Administrator)*@
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

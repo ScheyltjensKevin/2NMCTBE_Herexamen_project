@@ -1,0 +1,17 @@
+F:\src\back\EasyFlights\EasyFlights.API\bin\Release\netcoreapp2.2\EasyFlights.API.deps.json
+F:\src\back\EasyFlights\EasyFlights.API\bin\Release\netcoreapp2.2\EasyFlights.API.runtimeconfig.json
+F:\src\back\EasyFlights\EasyFlights.API\bin\Release\netcoreapp2.2\EasyFlights.API.runtimeconfig.dev.json
+F:\src\back\EasyFlights\EasyFlights.API\bin\Release\netcoreapp2.2\EasyFlights.API.dll
+F:\src\back\EasyFlights\EasyFlights.API\bin\Release\netcoreapp2.2\EasyFlights.API.pdb
+F:\src\back\EasyFlights\EasyFlights.API\bin\Release\netcoreapp2.2\EasyFlights.Models.dll
+F:\src\back\EasyFlights\EasyFlights.API\bin\Release\netcoreapp2.2\EasyFlights.Models.pdb
+F:\src\back\EasyFlights\EasyFlights.API\obj\Release\netcoreapp2.2\EasyFlights.API.csprojAssemblyReference.cache
+F:\src\back\EasyFlights\EasyFlights.API\obj\Release\netcoreapp2.2\EasyFlights.API.csproj.CoreCompileInputs.cache
+F:\src\back\EasyFlights\EasyFlights.API\obj\Release\netcoreapp2.2\EasyFlights.API.RazorAssemblyInfo.cache
+F:\src\back\EasyFlights\EasyFlights.API\obj\Release\netcoreapp2.2\EasyFlights.API.RazorAssemblyInfo.cs
+F:\src\back\EasyFlights\EasyFlights.API\obj\Release\netcoreapp2.2\EasyFlights.API.AssemblyInfoInputs.cache
+F:\src\back\EasyFlights\EasyFlights.API\obj\Release\netcoreapp2.2\EasyFlights.API.AssemblyInfo.cs
+F:\src\back\EasyFlights\EasyFlights.API\obj\Release\netcoreapp2.2\EasyFlights.API.RazorTargetAssemblyInfo.cache
+F:\src\back\EasyFlights\EasyFlights.API\obj\Release\netcoreapp2.2\EasyFlights.API.csproj.CopyComplete
+F:\src\back\EasyFlights\EasyFlights.API\obj\Release\netcoreapp2.2\EasyFlights.API.dll
+F:\src\back\EasyFlights\EasyFlights.API\obj\Release\netcoreapp2.2\EasyFlights.API.pdb

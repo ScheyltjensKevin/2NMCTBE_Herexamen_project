@@ -1,0 +1,14 @@
+F:\src\back\EasyFlights\EasyFlights.IntegrationTests\bin\Debug\netcoreapp2.2\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+F:\src\back\EasyFlights\EasyFlights.IntegrationTests\bin\Debug\netcoreapp2.2\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+F:\src\back\EasyFlights\EasyFlights.IntegrationTests\bin\Debug\netcoreapp2.2\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+F:\src\back\EasyFlights\EasyFlights.IntegrationTests\bin\Debug\netcoreapp2.2\EasyFlights.IntegrationTests.deps.json
+F:\src\back\EasyFlights\EasyFlights.IntegrationTests\bin\Debug\netcoreapp2.2\EasyFlights.IntegrationTests.runtimeconfig.json
+F:\src\back\EasyFlights\EasyFlights.IntegrationTests\bin\Debug\netcoreapp2.2\EasyFlights.IntegrationTests.runtimeconfig.dev.json
+F:\src\back\EasyFlights\EasyFlights.IntegrationTests\bin\Debug\netcoreapp2.2\EasyFlights.IntegrationTests.dll
+F:\src\back\EasyFlights\EasyFlights.IntegrationTests\bin\Debug\netcoreapp2.2\EasyFlights.IntegrationTests.pdb
+F:\src\back\EasyFlights\EasyFlights.IntegrationTests\obj\Debug\netcoreapp2.2\EasyFlights.IntegrationTests.csprojAssemblyReference.cache
+F:\src\back\EasyFlights\EasyFlights.IntegrationTests\obj\Debug\netcoreapp2.2\EasyFlights.IntegrationTests.csproj.CoreCompileInputs.cache
+F:\src\back\EasyFlights\EasyFlights.IntegrationTests\obj\Debug\netcoreapp2.2\EasyFlights.IntegrationTests.AssemblyInfoInputs.cache
+F:\src\back\EasyFlights\EasyFlights.IntegrationTests\obj\Debug\netcoreapp2.2\EasyFlights.IntegrationTests.AssemblyInfo.cs
+F:\src\back\EasyFlights\EasyFlights.IntegrationTests\obj\Debug\netcoreapp2.2\EasyFlights.IntegrationTests.dll
+F:\src\back\EasyFlights\EasyFlights.IntegrationTests\obj\Debug\netcoreapp2.2\EasyFlights.IntegrationTests.pdb
